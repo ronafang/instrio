@@ -1,2 +1,4 @@
 *.env
 infra/*
+.DS_STORE
+*__pycache__

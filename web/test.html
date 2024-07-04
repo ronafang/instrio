@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Recording with RecordRTC</title>
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+</head>
+<body>
+    <button id="start-recording">Start Recording</button>
+    <button id="stop-recording" disabled>Stop Recording</button>
+    <div id="recordings"></div>
+
+    <script>
+        let recorder;
+        let mediaStream;
+        let bufferQueue = [];
+        let isPlaying = false;
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        let currentSourceNode = null;
+        let outputUrl = '';
+
+        async function fetchAudioData(url) {
+            const response = await fetch(url);
+            const arrayBuffer = await response.arrayBuffer();
+            return audioContext.decodeAudioData(arrayBuffer);
+        }
+
+        function playNextBuffer() {
+            if (bufferQueue.length > 0) {
+                const buffer = bufferQueue.shift();
+                const nextSourceNode = audioContext.createBufferSource();
+                nextSourceNode.buffer = buffer;
+                nextSourceNode.connect(audioContext.destination);
+
+                if (currentSourceNode) {
+                    const currentTime = audioContext.currentTime;
+                    const endTime = currentSourceNode.startTime + currentSourceNode.buffer.duration;
+
+                    if (currentTime < endTime) {
+                        nextSourceNode.start(endTime);
+                    } else {
+                        nextSourceNode.start(currentTime);
+                    }
+                } else {
+                    nextSourceNode.start(audioContext.currentTime);
+                }
+
+                nextSourceNode.onended = playNextBuffer; // Set up the next buffer to play when this one ends
+                currentSourceNode = nextSourceNode;
+                isPlaying = true;
+            } else {
+                isPlaying = false; // No more buffers to play
+            }
+        }
+
+        async function uploadAudio(blob) {
+            console.log('Audio Blob:', blob);
+            try {
+                // Request signed URLs from the server
+                const response = await fetch('http://localhost:8000/upload-audio-url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const data = await response.json();
+                console.log(data);
+                const inputUrl = data.input_url;
+                outputUrl = data.output_url;
+                console.log("set outputUrl to")
+                console.log(outputUrl)
+
+                // Upload the audio blob
+                const uploadResponse = await fetch(inputUrl, {
+                    method: 'PUT',
+                    body: blob,
+                    headers: {
+                        'Content-Type': 'audio/wav'
+                    }
+                });
+
+                if (uploadResponse.ok) {
+                    console.log('Successfully uploaded the audio blob to:', inputUrl);
+                } else {
+                    console.error('Failed to upload the audio blob.');
+                }
+            } catch (error) {
+                console.error('Error during the upload process:', error);
+            }
+        }
+
+        async function pollProcessedAudio() {
+            try {
+                if (outputUrl !=  ''){
+
+                    const outputResponse = await fetch(outputUrl);
+
+                    if (outputResponse.ok) {
+                        console.log('Processing complete. Fetching the processed audio.');
+                        const audioBuffer = await fetchAudioData(outputUrl);
+                        // Add the new audio buffer to the queue
+                        bufferQueue.push(audioBuffer);
+                        outputUrl = ''
+                        if (!isPlaying) {
+                            playNextBuffer(); // Start playing if not already playing
+                        }
+                    }
+            }
+            } catch (error) {
+                console.error('Error while checking processing status:', error);
+            }
+        }
+
+        document.getElementById('start-recording').onclick = async () => {
+            mediaStream = await navigator.mediaDevices.getDisplayMedia({ 
+                video: true, 
+                audio: { channels: 2, autoGainControl: false, echoCancellation: false, noiseSuppression: false, sampleSize:16 }
+            });
+            const audioTracks = mediaStream.getAudioTracks();
+            if (audioTracks.length === 0) {
+                throw new Error("No audio track found in screen capture");
+            }
+
+            const audioStream = new MediaStream(audioTracks);
+            recorder = new RecordRTC(audioStream, {
+                type: 'audio',
+                mimeType: 'audio/wav',
+                recorderType: StereoAudioRecorder,
+                desiredSampRate: 44100,
+                timeSlice: 10000,
+                ondataavailable: uploadAudio
+            });
+
+            recorder.startRecording();
+            document.getElementById('start-recording').disabled = true;
+            document.getElementById('stop-recording').disabled = false;
+
+            // Start polling every second
+            setInterval(pollProcessedAudio, 1000);
+        };
+
+        document.getElementById('stop-recording').onclick = () => {
+            recorder.stopRecording(() => {
+                let blob = recorder.getBlob();
+                console.log('Final Audio Blob:', blob);
+            });
+
+            mediaStream.getTracks().forEach(track => track.stop());
+            document.getElementById('start-recording').disabled = false;
+            document.getElementById('stop-recording').disabled = true;
+        };
+    </script>
+</body>
+</html>
