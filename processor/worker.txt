@@ -1,0 +1,625 @@
+took 4.3226401805877686 seconds
+Successfully uploaded to output/e25ce1d2-9c4e-4dff-82f1-44e935512a2a.wav
+took 2.542487621307373 seconds
+Successfully uploaded to output/71021919-f795-4c9e-af45-50e2e2a4bff3.wav
+took 2.6499972343444824 seconds
+Successfully uploaded to output/0b052cff-9ff0-409b-b0ed-8a1ad4fbf6de.wav
+took 2.6640799045562744 seconds
+Successfully uploaded to output/94a56971-1e81-4398-a957-f75c1334281e.wav
+took 2.7435405254364014 seconds
+Successfully uploaded to output/3c444463-fbe1-495e-858a-baaa0335b9de.wav
+took 2.5785634517669678 seconds
+Successfully uploaded to output/41569828-2483-411e-ad2b-1968c1b5a26c.wav
+took 2.5976133346557617 seconds
+Successfully uploaded to output/ef2fe5da-0b2e-4ccc-8cc9-0f8ab243d109.wav
+took 2.5738837718963623 seconds
+Successfully uploaded to output/90b8591e-8fab-46d0-8591-cb4f199ab0f2.wav
+took 2.673150062561035 seconds
+Successfully uploaded to output/bad11094-3426-49be-b7ec-5c465631704e.wav
+took 2.661456823348999 seconds
+Successfully uploaded to output/1b85e838-90b6-4265-92c5-edede30430fd.wav
+took 2.6842641830444336 seconds
+Successfully uploaded to output/70be28bd-1cd4-40f3-9915-90996e1c5703.wav
+took 2.5819222927093506 seconds
+Successfully uploaded to output/fbaece17-4b02-49e7-afec-a0766a7584b3.wav
+took 2.5324013233184814 seconds
+Successfully uploaded to output/c20f336d-fa0c-4ba6-b6bd-b4cfb5461b02.wav
+took 2.58979868888855 seconds
+Successfully uploaded to output/8eacde33-3e0e-4592-b4c9-4dda277f6610.wav
+took 2.5650320053100586 seconds
+Successfully uploaded to output/37cfeb9a-273c-44ab-a663-501d98ced1de.wav
+took 2.5062453746795654 seconds
+Successfully uploaded to output/518fc492-c6fd-4d6b-8bdb-af7a226db04c.wav
+took 2.534383773803711 seconds
+Successfully uploaded to output/e2f575fc-7b48-454c-a63c-dbda7ac2ac96.wav
+took 2.678278923034668 seconds
+Successfully uploaded to output/f1159234-9dbb-48a3-84fd-f2d6d9c817b1.wav
+took 2.6583752632141113 seconds
+Successfully uploaded to output/cd78a384-9755-44bd-8b82-9ddc92e4cf39.wav
+took 2.6725525856018066 seconds
+Successfully uploaded to output/4a266a71-c4b5-4e16-ad18-2d6b0bb69bfa.wav
+took 2.6504104137420654 seconds
+Successfully uploaded to output/f6e85d80-ca7d-45f4-852a-4ba4a3f7a862.wav
+took 2.5905771255493164 seconds
+Successfully uploaded to output/dd6f4ab8-b7b9-4f63-9eeb-750175892225.wav
+took 2.578404426574707 seconds
+Successfully uploaded to output/2d2a699f-2121-40a4-8753-9969a63db79f.wav
+took 2.607177495956421 seconds
+Successfully uploaded to output/5ff8b763-43c2-409c-babf-4c853afc0d26.wav
+took 2.621643304824829 seconds
+Successfully uploaded to output/20bb46a1-32d5-43fe-b9b4-c4449d102269.wav
+took 2.5193543434143066 seconds
+Successfully uploaded to output/11530b8b-1b02-48f8-b289-16ae3cb01ae4.wav
+took 2.6847546100616455 seconds
+Successfully uploaded to output/19251baa-227a-4081-a627-76c5df091425.wav
+took 2.6990292072296143 seconds
+Successfully uploaded to output/5c880571-ad21-46de-bb19-4a3883bbc754.wav
+took 2.554926872253418 seconds
+Successfully uploaded to output/714a4cfd-4507-4b23-bcbe-99a35e01770f.wav
+took 2.6549594402313232 seconds
+Successfully uploaded to output/b0f2e943-794c-4415-b142-dadf0a2ab2da.wav
+took 2.589830160140991 seconds
+Successfully uploaded to output/cdc6c6f1-968d-4584-9027-a51b9a906c65.wav
+took 2.5623483657836914 seconds
+Successfully uploaded to output/039da37d-a771-4fbf-9347-fe7ec207b929.wav
+took 2.6210153102874756 seconds
+Successfully uploaded to output/f13f7c74-142a-47ac-ab69-2957a8d5f01a.wav
+took 2.668159008026123 seconds
+Successfully uploaded to output/169a0b9c-eb13-4139-87a8-bf8642618a66.wav
+took 2.6791322231292725 seconds
+Successfully uploaded to output/4dd2979d-b1a1-4940-a19f-2bccbfbe2396.wav
+took 2.671064615249634 seconds
+Successfully uploaded to output/6f6da018-a2bf-4a80-a7ee-4b94a70e81c2.wav
+took 2.5861129760742188 seconds
+Successfully uploaded to output/08e64e98-dcd9-46d6-9b5b-d2c558e274f7.wav
+took 2.5513041019439697 seconds
+Successfully uploaded to output/e4d95c31-b546-42d2-abd0-3c470f4f6f78.wav
+took 2.5783088207244873 seconds
+Successfully uploaded to output/3a2ce086-b8e8-4db6-bbb9-12d080963f39.wav
+took 2.6860134601593018 seconds
+Successfully uploaded to output/075c018f-d1e1-4958-bddb-777ea4a74e58.wav
+took 2.615887403488159 seconds
+Successfully uploaded to output/46189e72-fbd5-42f4-b021-ea201bd7c4a7.wav
+took 2.587360143661499 seconds
+Successfully uploaded to output/fdf3744b-98da-4fde-af54-3f9cad22f5d2.wav
+took 2.676068067550659 seconds
+Successfully uploaded to output/527872c2-1489-484a-9387-f05652b98033.wav
+took 2.5934462547302246 seconds
+Successfully uploaded to output/41795c69-2a52-439a-ad89-0125ea1a65f9.wav
+took 2.573514223098755 seconds
+Successfully uploaded to output/d9a93efc-a6dd-46bf-a191-8d87c906ab9f.wav
+took 2.6900634765625 seconds
+Successfully uploaded to output/4ceaaf25-e566-4378-9525-dcfa2832a1cd.wav
+took 2.599175453186035 seconds
+Successfully uploaded to output/f24deeb9-12e2-475d-be6b-65a40cf45def.wav
+took 2.636502265930176 seconds
+Successfully uploaded to output/20d642eb-4a86-4da4-971f-de09930120b4.wav
+took 2.63049578666687 seconds
+Successfully uploaded to output/32064bfe-081e-47bd-a986-a5e7703b8f5a.wav
+took 2.7157411575317383 seconds
+Successfully uploaded to output/cb9c823a-0112-4e10-b43a-b20fe71a77e0.wav
+took 2.7102723121643066 seconds
+Successfully uploaded to output/70d557da-00d4-4d9c-860a-fac3c108b981.wav
+took 2.650986433029175 seconds
+Successfully uploaded to output/50d6d3aa-1c1a-45c4-8210-3a72fcf9d689.wav
+took 2.5551254749298096 seconds
+Successfully uploaded to output/7a29f9f6-610d-41aa-add5-e83b4ced4793.wav
+took 2.677135944366455 seconds
+Successfully uploaded to output/3868bc35-1c7c-4fde-9061-5c6e7f668c48.wav
+took 2.6812632083892822 seconds
+Successfully uploaded to output/35caaa97-0707-4b5b-9e62-5363a27e4010.wav
+took 2.5427587032318115 seconds
+Successfully uploaded to output/4cfea51d-a5de-4f5f-a9da-7b745f4345e9.wav
+took 2.6430935859680176 seconds
+Successfully uploaded to output/4e4465e8-a503-463b-a94c-86f70989326a.wav
+took 2.664118528366089 seconds
+Successfully uploaded to output/b49a545a-5c2e-4d37-a48d-c8e29486dc87.wav
+took 2.5133678913116455 seconds
+Successfully uploaded to output/ab65a4b8-fbe5-4cc2-9a07-78f37f2090b4.wav
+took 2.594572067260742 seconds
+Successfully uploaded to output/c1cb19c6-e50a-4e09-9592-a1531b8a1586.wav
+took 2.594683885574341 seconds
+Successfully uploaded to output/21a63a06-194c-4572-a65a-6de726179caf.wav
+took 2.730708360671997 seconds
+Successfully uploaded to output/19f83385-fd53-4a3c-b279-3a414b37e59b.wav
+took 2.6863765716552734 seconds
+Successfully uploaded to output/206e58aa-bfd3-4518-aab4-6c3e31e028b4.wav
+took 2.6226351261138916 seconds
+Successfully uploaded to output/9bcdf60a-084d-4764-812e-30a48ce97bef.wav
+took 2.557565927505493 seconds
+Successfully uploaded to output/e03c029b-166f-42e0-abc6-8d063c24ea6c.wav
+took 2.5941905975341797 seconds
+Successfully uploaded to output/e38ceb48-9135-42ff-b5bd-cbfc34df396f.wav
+took 2.744893789291382 seconds
+Successfully uploaded to output/85242726-9ff5-4fcd-b79e-f304af16b3dd.wav
+took 2.5129833221435547 seconds
+Successfully uploaded to output/d7c08ec4-162e-4f98-bf28-9a92235747ad.wav
+took 2.637571096420288 seconds
+Successfully uploaded to output/6acedea9-9c46-43d2-8e58-a101fd4861ae.wav
+took 2.6689281463623047 seconds
+Successfully uploaded to output/f1c05827-74ea-4395-b973-1ea3e04f823b.wav
+took 2.543682336807251 seconds
+Successfully uploaded to output/bdfee7b8-07bb-48c6-98c1-7063c5982810.wav
+took 2.595837354660034 seconds
+Successfully uploaded to output/baab058b-632a-46b6-bd2d-582a7209cedb.wav
+took 2.5634114742279053 seconds
+Successfully uploaded to output/ea60a30a-b323-4db4-8823-726b8ad83646.wav
+took 2.632237195968628 seconds
+Successfully uploaded to output/b980b83c-22c6-42b8-8d24-cabd099dedb6.wav
+took 2.606834888458252 seconds
+Successfully uploaded to output/c909e71f-11e2-4be4-86d7-ec25377d2102.wav
+took 2.648916244506836 seconds
+Successfully uploaded to output/dae916e5-a0b0-4c9b-9443-6c5f7c79b704.wav
+took 2.564661741256714 seconds
+Successfully uploaded to output/246d9ff6-b30f-424e-99e1-d4bd688be8a3.wav
+took 2.5921881198883057 seconds
+Successfully uploaded to output/c4e9333c-541a-4271-9f7e-bd35bda44284.wav
+took 2.687066078186035 seconds
+Successfully uploaded to output/8b764c09-ea2b-46c4-9e36-9102bcfbe67a.wav
+took 2.7066071033477783 seconds
+Successfully uploaded to output/77620b2a-8081-414e-803d-35bedd3b8eb5.wav
+took 2.5019075870513916 seconds
+Successfully uploaded to output/55dcdc81-0344-4433-b497-4d5fea73af24.wav
+took 2.600940227508545 seconds
+Successfully uploaded to output/df74d52e-d976-4adc-ae6a-1895cf56cc2c.wav
+took 2.6080968379974365 seconds
+Successfully uploaded to output/9f154054-9227-476a-b2c8-410ee9a69a41.wav
+took 2.5930285453796387 seconds
+Successfully uploaded to output/7d899633-73d5-49d6-971b-992a0ffe972d.wav
+took 2.51570463180542 seconds
+Successfully uploaded to output/e95a3a1a-0b1d-4d41-845c-c0cedd415b47.wav
+took 2.5800154209136963 seconds
+Successfully uploaded to output/1661e646-255c-4ac0-b839-5aa4c2b2d524.wav
+took 2.581913471221924 seconds
+Successfully uploaded to output/7834f2e1-57b0-490c-a38c-424acc218c50.wav
+took 2.4878931045532227 seconds
+Successfully uploaded to output/64357f42-613a-4c1c-b42d-90c3a78c3ef0.wav
+took 2.540886878967285 seconds
+Successfully uploaded to output/2468e5f7-a3f3-438b-a75d-d045d6d08e54.wav
+took 2.6326003074645996 seconds
+Successfully uploaded to output/fc1d10ff-a0a8-4823-8833-e3e732c1cd98.wav
+took 2.588809013366699 seconds
+Successfully uploaded to output/cc97376c-9605-4405-bf96-b683a3f2cfc6.wav
+took 2.6103639602661133 seconds
+Successfully uploaded to output/1d2cd117-aa18-4748-af79-b7d70bc93639.wav
+took 2.563488245010376 seconds
+Successfully uploaded to output/d9dfd0f6-60c3-4d2a-b7d1-5693dc7d6510.wav
+took 2.5584731101989746 seconds
+Successfully uploaded to output/c8763f15-2b45-4635-b268-0c0b8e7762e9.wav
+took 2.5618515014648438 seconds
+Successfully uploaded to output/61d92b1b-445e-42be-89c3-bc2b7d9852e7.wav
+took 2.55161714553833 seconds
+Successfully uploaded to output/5334576d-e8fa-4aa2-a28a-94f0a2369c4e.wav
+took 2.5660343170166016 seconds
+Successfully uploaded to output/eadea64f-099f-41d9-9514-e597e7e656a3.wav
+took 2.5101211071014404 seconds
+Successfully uploaded to output/791a1982-df2d-4446-bc41-4d98d5136df0.wav
+took 2.667684555053711 seconds
+Successfully uploaded to output/8ec8d6da-625e-4ef4-a88a-a42b4454f009.wav
+took 2.529860734939575 seconds
+Successfully uploaded to output/89d4bf27-8023-4c08-a708-117ac3e4b9b9.wav
+took 2.4972240924835205 seconds
+Successfully uploaded to output/5d2f985f-99cc-4dbb-8d50-37cbc351a107.wav
+took 2.678053617477417 seconds
+Successfully uploaded to output/6c07aa2c-b65a-4e9d-8f6b-a98f36171901.wav
+took 2.7007315158843994 seconds
+Successfully uploaded to output/264d9a25-8bdf-4297-b09b-6f483f2a8290.wav
+took 2.481487274169922 seconds
+Successfully uploaded to output/7405b93f-6ca2-4d60-bc93-53f688d3585f.wav
+took 2.5527596473693848 seconds
+Successfully uploaded to output/57ae8ec5-6080-4c7a-93f0-a26824b5198d.wav
+took 2.5636563301086426 seconds
+Successfully uploaded to output/645c6ca2-a6d3-4b54-96bb-b0be1cc84284.wav
+took 2.475041389465332 seconds
+Successfully uploaded to output/f98fe219-43ea-4856-88ac-e4b939439214.wav
+took 2.6293742656707764 seconds
+Successfully uploaded to output/4b43004e-5563-439e-a13a-cbc46c217290.wav
+took 2.477602243423462 seconds
+Successfully uploaded to output/7e5f2c59-5e1c-4f9b-818b-9792557cf137.wav
+took 2.483492851257324 seconds
+Successfully uploaded to output/fb5e7631-1aca-4719-9b94-99613990e337.wav
+took 2.548877000808716 seconds
+Successfully uploaded to output/23d985e1-9ca9-4626-bd85-114f7407e88e.wav
+took 2.495746612548828 seconds
+Successfully uploaded to output/83baaa86-cdca-44c1-bb75-8a05846bfa30.wav
+took 2.5396087169647217 seconds
+Successfully uploaded to output/29bafd82-b2a4-49c1-9411-e5e02e7ad39f.wav
+took 2.4902865886688232 seconds
+Successfully uploaded to output/17a2193f-a885-4293-a7ce-dd88c387f9a1.wav
+took 2.6024293899536133 seconds
+Successfully uploaded to output/a19d7a26-8f0c-4997-ab28-966086ab5f91.wav
+took 2.5992109775543213 seconds
+Successfully uploaded to output/5804682f-d0f3-4a64-bef3-09bf7ce1f414.wav
+took 2.534688711166382 seconds
+Successfully uploaded to output/dbb91e16-d653-453d-85b6-065a3fceef5e.wav
+took 2.488579273223877 seconds
+Successfully uploaded to output/5fed306f-d63a-4236-983c-25e883e4b6ca.wav
+took 2.549776554107666 seconds
+Successfully uploaded to output/3025bd0d-4fa2-4b21-8b8d-0500bb64dc3e.wav
+took 2.512786626815796 seconds
+Successfully uploaded to output/925fd422-005d-4426-9fd5-e6e091bbf4e8.wav
+took 2.5487911701202393 seconds
+Successfully uploaded to output/aaa2edd3-0548-4ed6-a234-f470ca2f0311.wav
+took 2.483842134475708 seconds
+Successfully uploaded to output/7ed44760-9404-4d19-a832-b0e93e9181c0.wav
+took 2.525209426879883 seconds
+Successfully uploaded to output/3fd2a5ad-1337-4b09-93f6-84f527652955.wav
+took 2.5894546508789062 seconds
+Successfully uploaded to output/e9302403-a3af-4f38-83e7-ba4474d73bba.wav
+took 2.6067726612091064 seconds
+Successfully uploaded to output/0169100b-2657-4b09-ab0a-2bea7825d2c5.wav
+took 2.540248394012451 seconds
+Successfully uploaded to output/d0087bb9-3382-441b-bf7f-73ac9b70698b.wav
+took 2.5558719635009766 seconds
+Successfully uploaded to output/edf7979a-c3a8-4b83-a0cf-45a7baf75988.wav
+took 2.5531816482543945 seconds
+Successfully uploaded to output/e21188e6-35e3-4a9b-b518-9d97e2b64b58.wav
+took 2.5589756965637207 seconds
+Successfully uploaded to output/779f4807-d709-46b1-9b21-0da0153d9d16.wav
+took 2.5797312259674072 seconds
+Successfully uploaded to output/45223c7d-4943-4c80-820e-6b0e3455d732.wav
+took 2.572054147720337 seconds
+Successfully uploaded to output/b0488257-eb20-4642-a3ce-1b0eb6943f31.wav
+took 2.5863378047943115 seconds
+Successfully uploaded to output/9dda8c73-b0b3-4a57-aaf9-585b0549270b.wav
+took 2.5807416439056396 seconds
+Successfully uploaded to output/f4682ee4-5676-450e-a746-73a0ad222282.wav
+took 2.6839005947113037 seconds
+Successfully uploaded to output/0a3ab394-9af0-476f-88dd-f1ded5ca1411.wav
+took 2.5444154739379883 seconds
+Successfully uploaded to output/02e67bff-9b37-4348-829f-cfd7c9058a5c.wav
+took 2.518606424331665 seconds
+Successfully uploaded to output/9c172e26-79dd-402d-854a-3ed5cf56b7c9.wav
+took 2.643646240234375 seconds
+Successfully uploaded to output/10c864d6-273f-4424-8349-0c0f8e85c701.wav
+took 2.6007699966430664 seconds
+Successfully uploaded to output/bccdb7a6-3b52-44d7-8512-3d6627f2ca07.wav
+took 2.6345744132995605 seconds
+Successfully uploaded to output/c2d21c99-0ebd-4c8f-ab2f-ee6002237353.wav
+took 2.493600606918335 seconds
+Successfully uploaded to output/455054f6-4e76-4dee-9f9c-ab7be6cb4c4c.wav
+took 2.5710301399230957 seconds
+Successfully uploaded to output/b94f8221-b42b-4938-a160-fd37ef81649e.wav
+took 2.5658223628997803 seconds
+Successfully uploaded to output/e8aff87c-4454-4e43-85ba-453d0cd41834.wav
+took 2.4550204277038574 seconds
+Successfully uploaded to output/4bc275d1-0f35-4d80-99fd-326344b92e6a.wav
+took 2.582681179046631 seconds
+Successfully uploaded to output/e8ca88c1-e168-4b3f-8fa1-a9cc98e2054d.wav
+took 2.620572328567505 seconds
+Successfully uploaded to output/260f9522-2846-4158-9fcb-c734c92b9779.wav
+took 2.513705015182495 seconds
+Successfully uploaded to output/ccb2ce10-415e-46bd-a658-fbaa6fabf847.wav
+took 2.6467814445495605 seconds
+Successfully uploaded to output/c7e67ba0-df5f-4dbd-a0d9-d0b8c15a9fc7.wav
+took 2.6224207878112793 seconds
+Successfully uploaded to output/e4783d56-8090-4a40-a834-7d890b96df94.wav
+took 2.619016647338867 seconds
+Successfully uploaded to output/b3f0bc9f-5eb4-4a30-99b2-4f8abde22d87.wav
+took 2.454401731491089 seconds
+Successfully uploaded to output/c13f500c-29f0-4f1e-9f89-435f9f252efd.wav
+took 2.5676462650299072 seconds
+Successfully uploaded to output/0826e20e-c695-4d3a-a4f9-ace98f942ccf.wav
+took 2.6218485832214355 seconds
+Successfully uploaded to output/4a61a437-b6e4-42e2-bf3f-6c7b1c8e24bd.wav
+took 2.516435146331787 seconds
+Successfully uploaded to output/db4cd186-8a59-4fa5-b6e2-63288906e63b.wav
+took 2.458519697189331 seconds
+Successfully uploaded to output/ce4733da-e829-4695-91f1-b4730bee263f.wav
+took 2.4899849891662598 seconds
+Successfully uploaded to output/4a6ffceb-715e-43a1-86ae-5fead4c6a0e0.wav
+took 2.707810401916504 seconds
+Successfully uploaded to output/1acb3371-ee86-44b6-ad34-c3c33cfbe0af.wav
+took 2.472440481185913 seconds
+Successfully uploaded to output/8203bcbf-287e-444b-a813-e44f2264dcf7.wav
+took 2.662149667739868 seconds
+Successfully uploaded to output/5bb1c7db-ca2f-43f6-a3bf-57259e03f7e4.wav
+took 2.5236973762512207 seconds
+Successfully uploaded to output/ff51220e-0027-424c-8db7-d9d77afe7d06.wav
+took 2.608981132507324 seconds
+Successfully uploaded to output/f65e3dbe-7927-4ee3-86ee-07da5bb07a02.wav
+took 2.580385446548462 seconds
+Successfully uploaded to output/7efa7ede-ae08-4791-9b8a-7029e49fc5a0.wav
+took 2.5013251304626465 seconds
+Successfully uploaded to output/356aaab4-aa85-4d72-8cbf-fb73638008cb.wav
+took 2.5500359535217285 seconds
+Successfully uploaded to output/cf233b84-82ff-417d-bec7-57e29c228897.wav
+took 2.500690221786499 seconds
+Successfully uploaded to output/2c1cb17e-07d6-40fa-a532-626879ab08df.wav
+took 2.623293876647949 seconds
+Successfully uploaded to output/a31ec039-ab7e-4a7f-9e01-3943a0ddf4bb.wav
+took 2.536163806915283 seconds
+Successfully uploaded to output/03b223be-37d8-45d4-a122-e2d4d84f18a4.wav
+took 2.521660327911377 seconds
+Successfully uploaded to output/506e74da-47e0-40ad-be4c-aec88be7a997.wav
+took 2.57369327545166 seconds
+Successfully uploaded to output/4bd9fa76-1a39-4012-bc56-7be988ba63d8.wav
+took 2.546811103820801 seconds
+Successfully uploaded to output/338afbe0-c4ff-4b9d-a1aa-03c9bc2f00c6.wav
+took 2.575809955596924 seconds
+Successfully uploaded to output/225b42a1-968f-4cd8-b058-e4d813dd9603.wav
+took 2.6034579277038574 seconds
+Successfully uploaded to output/015a7b13-bd01-4129-b9d4-a5b37dfc4aae.wav
+took 2.5475099086761475 seconds
+Successfully uploaded to output/3173a01d-0f39-444b-8ca6-0d785a63624e.wav
+took 2.5429165363311768 seconds
+Successfully uploaded to output/22aa5194-7a73-4e62-b28c-2022d2990237.wav
+took 2.5863471031188965 seconds
+Successfully uploaded to output/15c9cec2-1373-47e5-93a6-26a78f48bde3.wav
+took 2.6137099266052246 seconds
+Successfully uploaded to output/63de2f36-57f4-4bf7-9637-bb13cccffc43.wav
+took 2.500056028366089 seconds
+Successfully uploaded to output/614ee884-9088-464f-b639-3e7c014e8a38.wav
+took 2.5339596271514893 seconds
+Successfully uploaded to output/d0475e58-f245-4e06-9e50-b87f716bfb97.wav
+took 2.5106143951416016 seconds
+Successfully uploaded to output/bba149ee-f552-4ce3-a272-cc04dc1200b7.wav
+took 2.554965019226074 seconds
+Successfully uploaded to output/dce15ed2-e4a6-42ee-879b-efdbcf075ca3.wav
+took 2.5129342079162598 seconds
+Successfully uploaded to output/a1f97b42-1b81-4dc1-901e-b67b98f06220.wav
+took 2.583184003829956 seconds
+Successfully uploaded to output/87b30dcb-3ec1-4038-8a8a-73be2bc679d1.wav
+took 2.4812135696411133 seconds
+Successfully uploaded to output/3ce5e310-9964-4c62-9f20-9761350828dc.wav
+took 2.491687536239624 seconds
+Successfully uploaded to output/6ee40bbd-5d6e-4e46-82bd-86cf6ce4e4a3.wav
+took 2.624905824661255 seconds
+Successfully uploaded to output/5ef83428-251c-42f7-93ad-ebd6b0f3afc8.wav
+took 2.6157894134521484 seconds
+Successfully uploaded to output/45112f9a-7ea3-43c0-b6e0-793a624bd6c4.wav
+took 2.5004725456237793 seconds
+Successfully uploaded to output/ff0e3f5d-fd3a-470c-9455-6f65030d26a5.wav
+took 2.5723302364349365 seconds
+Successfully uploaded to output/2f444dcb-57e1-4076-8c63-529165336fd8.wav
+took 2.516577959060669 seconds
+Successfully uploaded to output/9fa7fb4f-044e-4f96-b605-458fb0014c92.wav
+took 2.634978771209717 seconds
+Successfully uploaded to output/9450f1a4-9722-490c-8da8-eebb7d27d39d.wav
+took 2.4850151538848877 seconds
+Successfully uploaded to output/aefdcf0b-6a0d-428a-865d-346464ef7f69.wav
+took 2.470487356185913 seconds
+Successfully uploaded to output/0925e4f5-abf4-4904-8163-016f784b2dea.wav
+took 2.5975019931793213 seconds
+Successfully uploaded to output/cdc1bb15-58e9-41ef-9c32-e13b2cb047d7.wav
+took 2.639547109603882 seconds
+Successfully uploaded to output/9bded51a-0772-4442-b48d-467d8008ec8c.wav
+took 2.4998323917388916 seconds
+Successfully uploaded to output/c93356ad-62ef-47f5-9736-7fc3a22a4bbc.wav
+took 2.5249311923980713 seconds
+Successfully uploaded to output/ab654153-2299-4fe0-bb4c-59fb7a8755dc.wav
+took 2.5508549213409424 seconds
+Successfully uploaded to output/18ba1daa-9cea-4d71-9fa4-2f8fae66a896.wav
+took 2.4921159744262695 seconds
+Successfully uploaded to output/b25ceef7-b462-4429-94d8-7ec667da0645.wav
+took 2.569715738296509 seconds
+Successfully uploaded to output/5a6dd413-a9c3-48aa-a2cf-03781a684e42.wav
+took 2.510955572128296 seconds
+Successfully uploaded to output/cc4d794b-be59-4a3f-8330-f6d68b06b28c.wav
+took 2.6298084259033203 seconds
+Successfully uploaded to output/9bac46a8-16fc-49f4-8100-7edd652e9561.wav
+took 2.5404374599456787 seconds
+Successfully uploaded to output/33a548c6-5c2d-42e8-86ae-4c02702499ad.wav
+took 2.51607608795166 seconds
+Successfully uploaded to output/404f4892-980c-4df8-9738-f9c207cd3c08.wav
+took 2.582176923751831 seconds
+Successfully uploaded to output/7809b291-22a5-4a17-a386-ca19bbfd9a5c.wav
+took 2.53509259223938 seconds
+Successfully uploaded to output/1c08d5e2-61c5-43de-8f4a-d595c3caba5f.wav
+took 2.630406141281128 seconds
+Successfully uploaded to output/a929dfde-ee1d-4dc5-9ac9-92d8382c2bcc.wav
+took 2.5997684001922607 seconds
+Successfully uploaded to output/55f539cd-a5fc-4de9-986d-7085031b01a2.wav
+took 2.554476737976074 seconds
+Successfully uploaded to output/13bc5b0f-1186-428a-a1e6-3d9a25a95413.wav
+took 2.6250345706939697 seconds
+Successfully uploaded to output/a2b37da7-5b68-44d7-bdc3-05a5e9dc9103.wav
+took 2.5279688835144043 seconds
+Successfully uploaded to output/ae85a2b7-1910-47bf-a915-13973ef9e7a7.wav
+took 2.53242564201355 seconds
+Successfully uploaded to output/db3d1fb8-6e41-41f7-b7a2-3072128a29b5.wav
+took 2.5799448490142822 seconds
+Successfully uploaded to output/f72fd732-9d1e-42e9-9611-b7fc584db53c.wav
+took 2.58744740486145 seconds
+Successfully uploaded to output/c1c5584e-b4ff-41e7-8d27-a58193657a4e.wav
+took 2.544126510620117 seconds
+Successfully uploaded to output/80b3eafe-dae6-4278-a449-c30009d206a0.wav
+took 2.5581257343292236 seconds
+Successfully uploaded to output/4305e91d-bad9-4c64-8265-8f1df2008121.wav
+took 2.6419317722320557 seconds
+Successfully uploaded to output/fdd38b3a-3615-43b7-990d-c693437b17f9.wav
+took 2.596919536590576 seconds
+Successfully uploaded to output/1571e1c9-a19d-44c8-88ff-0af0ed90b376.wav
+took 2.518770456314087 seconds
+Successfully uploaded to output/a7d07eef-c8a4-4241-9cca-898822cb3f4a.wav
+took 2.486917018890381 seconds
+Successfully uploaded to output/50c25871-1761-4759-9f67-05eb367ed6f0.wav
+took 2.6216914653778076 seconds
+Successfully uploaded to output/71d87ac3-95a0-48da-b7e0-fbd9f38eb91a.wav
+took 2.558899402618408 seconds
+Successfully uploaded to output/9a1a3907-4f62-4f69-b0d7-98360a86313d.wav
+took 2.561534881591797 seconds
+Successfully uploaded to output/2e586170-5b93-43a2-aa11-af8e891bd1f4.wav
+took 2.507371425628662 seconds
+Successfully uploaded to output/c20e5764-8386-449e-9fd5-a75a19ad80f4.wav
+took 2.6731791496276855 seconds
+Successfully uploaded to output/7a00f1e3-0c70-4f1a-815b-3cde64bb65fc.wav
+took 2.463233232498169 seconds
+Successfully uploaded to output/ace2ae91-39d8-43d9-89e8-79c36a428075.wav
+took 2.607706308364868 seconds
+Successfully uploaded to output/fda738c9-cedf-4b7f-826e-a474928b555a.wav
+took 2.5106308460235596 seconds
+Successfully uploaded to output/e1506ac9-8c78-48d7-aec6-27a87c5f6711.wav
+took 2.5190622806549072 seconds
+Successfully uploaded to output/a3d23052-f465-4d49-aedc-1100f64cb1d3.wav
+took 2.5461409091949463 seconds
+Successfully uploaded to output/e7ad10d6-8bcd-471e-aa5e-be1042b0d193.wav
+took 2.496488332748413 seconds
+Successfully uploaded to output/17c3fbe3-8485-4860-88ff-2968650ea5ba.wav
+took 2.625455856323242 seconds
+Successfully uploaded to output/6e8e0482-54e2-41da-8f8e-44030167ea60.wav
+took 2.482424020767212 seconds
+Successfully uploaded to output/5c2c1556-9d0e-46de-aa6e-32bf64780922.wav
+took 2.5749576091766357 seconds
+Successfully uploaded to output/30bd739b-996c-41c0-93d9-a4aa29f5fc0f.wav
+took 2.5936574935913086 seconds
+Successfully uploaded to output/af9647ee-647f-4557-8513-66b031107b53.wav
+took 2.550351858139038 seconds
+Successfully uploaded to output/e9827f65-a276-468b-a21c-1259847c12bd.wav
+took 2.499844789505005 seconds
+Successfully uploaded to output/901b9167-d06b-493a-9df8-ba811f949783.wav
+took 2.63370943069458 seconds
+Successfully uploaded to output/a48322db-4d24-48b3-8206-028fbd538c19.wav
+took 2.4867358207702637 seconds
+Successfully uploaded to output/1556e2a9-0e3f-4d47-9ed9-e0a1bc4eddd8.wav
+took 2.636592388153076 seconds
+Successfully uploaded to output/9a5f0a19-ea86-433f-b334-09399fd8d5c7.wav
+took 2.5823960304260254 seconds
+Successfully uploaded to output/b2f1e0ba-f54a-479c-a014-6be7ac302077.wav
+took 2.596247673034668 seconds
+Successfully uploaded to output/108eefbf-878b-41b5-8f5b-2261d08cae46.wav
+took 2.5923268795013428 seconds
+Successfully uploaded to output/db363a38-a229-4d67-9a47-bdf7b9c1282d.wav
+took 2.562804937362671 seconds
+Successfully uploaded to output/fffa2dbb-1ee2-4086-91b5-a3aed0af5efd.wav
+took 2.579123020172119 seconds
+Successfully uploaded to output/25260b4f-9d78-40a8-994b-66991dec956a.wav
+took 2.598961591720581 seconds
+Successfully uploaded to output/37425e49-3da5-4fd6-a7da-1eef0229eab8.wav
+took 2.6580591201782227 seconds
+Successfully uploaded to output/204e6a05-8d67-42f9-9bb8-3f2e9628ce82.wav
+took 2.6051013469696045 seconds
+Successfully uploaded to output/909f9459-d424-4fed-bd2e-77fbf114f3a8.wav
+took 2.5654664039611816 seconds
+Successfully uploaded to output/d38ed67e-45a0-4c81-ba88-83cfd9df9150.wav
+took 2.5625226497650146 seconds
+Successfully uploaded to output/e7f3a51b-d8d3-4d84-b2e2-8ef4de0c688b.wav
+took 2.461528778076172 seconds
+Successfully uploaded to output/49f7a517-5b6f-4c31-b83d-989f1f6e2258.wav
+took 2.5394251346588135 seconds
+Successfully uploaded to output/901aa31c-1c2a-4fc2-ae50-836bdf387298.wav
+took 2.5563411712646484 seconds
+Successfully uploaded to output/df5113f5-6a8d-4efa-8141-e4a857f9e3c3.wav
+took 2.5832881927490234 seconds
+Successfully uploaded to output/f56d28dc-7d3c-4f19-b1a8-afa67f7eac10.wav
+took 2.6437840461730957 seconds
+Successfully uploaded to output/796dbc6d-cc34-47fe-aeec-ac52db7a2983.wav
+took 2.4711532592773438 seconds
+Successfully uploaded to output/48c92a1e-fe21-4b58-a393-2bf9a1d95d7f.wav
+took 2.645890951156616 seconds
+Successfully uploaded to output/882135cb-2f97-434b-b8ee-03e3370738e3.wav
+took 2.50113582611084 seconds
+Successfully uploaded to output/f32c103e-6213-45e3-9199-49c618f1b34b.wav
+took 2.623957872390747 seconds
+Successfully uploaded to output/0ab2283a-c73c-460f-bfd6-3cff8b601649.wav
+took 2.554029941558838 seconds
+Successfully uploaded to output/89926f52-88eb-4fe7-8718-b755bb082d1b.wav
+took 2.464909076690674 seconds
+Successfully uploaded to output/f9ddcb3e-b606-4b89-a8fe-6f699ecfa82c.wav
+took 2.540330648422241 seconds
+Successfully uploaded to output/b44ca455-93e6-4009-8680-8294a1e0081f.wav
+took 2.661555767059326 seconds
+Successfully uploaded to output/974bea05-2223-4893-9384-33a290fd7276.wav
+took 2.5842173099517822 seconds
+Successfully uploaded to output/e2ba19bf-0d3e-4cae-ab42-b1060dcb13b5.wav
+took 2.514899730682373 seconds
+Successfully uploaded to output/c4c8b9c3-e28a-4dac-8fb6-2af8480a4735.wav
+took 2.6042747497558594 seconds
+Successfully uploaded to output/5c0232af-de0c-4617-b069-a414935c764d.wav
+took 2.545783042907715 seconds
+Successfully uploaded to output/dc9062e2-4003-4871-926a-639ab1804457.wav
+took 2.587486505508423 seconds
+Successfully uploaded to output/bec00293-9216-4c21-a115-7e1bd0683a37.wav
+took 2.563056230545044 seconds
+Successfully uploaded to output/550bbd4f-232d-4a15-ab35-27cf2f058b5a.wav
+took 2.578536033630371 seconds
+Successfully uploaded to output/f755e1cd-3ec3-4d17-a0c6-562cf133f82f.wav
+took 2.7663187980651855 seconds
+Successfully uploaded to output/0547bc03-038f-43b8-ab28-2b9a85704bca.wav
+took 2.594994068145752 seconds
+Successfully uploaded to output/22d48192-646c-42fc-842c-73d74c1d9c3d.wav
+took 2.5370399951934814 seconds
+Successfully uploaded to output/78c5208a-434f-4883-a0e4-bce47c4bb5a8.wav
+took 2.5117099285125732 seconds
+Successfully uploaded to output/6ab1f92a-34f0-4d8e-9a97-b54c6ce96ae6.wav
+took 2.586876630783081 seconds
+Successfully uploaded to output/ba6c0350-d8f2-4c2b-beb0-98092035a4e5.wav
+took 2.473358631134033 seconds
+Successfully uploaded to output/8d32b5d5-5520-480e-ae73-34fe516bdb9c.wav
+took 2.5706846714019775 seconds
+Successfully uploaded to output/839e1cfa-a5fd-4e55-a517-201d28d9cc65.wav
+took 2.4970569610595703 seconds
+Successfully uploaded to output/58a9e0d8-0c2d-4dce-8a21-24ac5da84a4b.wav
+took 2.6260626316070557 seconds
+Successfully uploaded to output/e187e032-67ec-4a1c-b673-8fc436eebeb8.wav
+took 2.56793475151062 seconds
+Successfully uploaded to output/f27878c9-4ad2-4579-aded-1e868b4c6c8c.wav
+took 2.5810835361480713 seconds
+Successfully uploaded to output/5ffd650e-c227-4dcd-a1ee-5dac054ee799.wav
+took 2.583057165145874 seconds
+Successfully uploaded to output/b20782d2-aa7d-437f-92b2-81a2d99470fc.wav
+took 2.533017873764038 seconds
+Successfully uploaded to output/24aec22d-6bff-43d5-811b-98222a3d8d8c.wav
+took 2.6867823600769043 seconds
+Successfully uploaded to output/b9664ba0-1b81-4340-89dc-f54a80484a53.wav
+took 2.493539810180664 seconds
+Successfully uploaded to output/9b238fa4-d51e-416b-8563-4bc254bea9a4.wav
+took 2.570801019668579 seconds
+Successfully uploaded to output/1b369704-9f91-479c-acb5-6d2abf128c7d.wav
+took 2.5620012283325195 seconds
+Successfully uploaded to output/a9e7499b-6ce4-43b7-8b9b-0409a3043bbc.wav
+took 2.569490432739258 seconds
+Successfully uploaded to output/c6710f35-9d2b-48f9-a19a-a61054b84a8f.wav
+took 2.5738532543182373 seconds
+Successfully uploaded to output/81b3c14c-6d72-4cf5-9b45-9c2bf9bb3127.wav
+took 2.5763778686523438 seconds
+Successfully uploaded to output/3b61c9bc-7b23-487f-b5b5-1e9d120bbb45.wav
+took 2.638573169708252 seconds
+Successfully uploaded to output/75bbfd03-3219-4a2a-99cf-a6bff930e9f9.wav
+took 2.583836078643799 seconds
+Successfully uploaded to output/7db03244-f24a-4b5f-93cf-fad01298a65d.wav
+took 2.510294198989868 seconds
+Successfully uploaded to output/34c3cc8b-6578-469e-8923-3fe141a09809.wav
+took 2.524350166320801 seconds
+Successfully uploaded to output/688b47be-34d5-4109-9031-64aa31bff768.wav
+took 2.618342161178589 seconds
+Successfully uploaded to output/8754200b-7614-41fd-80ff-a9071597af6f.wav
+took 2.4862101078033447 seconds
+Successfully uploaded to output/3490496d-c0b1-4e8b-ba80-db8860218975.wav
+took 2.5027570724487305 seconds
+Successfully uploaded to output/3d11884f-4c44-4d5e-883a-533306a146ae.wav
+took 2.483936309814453 seconds
+Successfully uploaded to output/846945aa-61cb-4b73-8f81-4ec4bfabbb91.wav
+took 2.4888393878936768 seconds
+Successfully uploaded to output/15a5e470-96d7-499f-a366-639f467a65a4.wav
+took 2.619307279586792 seconds
+Successfully uploaded to output/334bd78a-63e3-4418-91b1-c8352ca955cf.wav
+took 2.571063280105591 seconds
+Successfully uploaded to output/beff7275-75fd-4e8f-9562-3a5a53ac006d.wav
+took 2.656635284423828 seconds
+Successfully uploaded to output/6721f40b-374f-4775-9c57-c201eaeb075f.wav
+took 2.619473457336426 seconds
+Successfully uploaded to output/bc4fd7cb-97f5-4b43-8066-2f0b5b466a0d.wav
+took 2.573699951171875 seconds
+Successfully uploaded to output/8bc04cb1-2a8f-441a-b02d-aa62097cad48.wav
+took 2.5050761699676514 seconds
+Successfully uploaded to output/bf58094c-2f5f-4dbb-a436-dd453abe25d4.wav
+took 2.7331905364990234 seconds
+Successfully uploaded to output/5dd1fb9f-ead8-4c6a-ade1-d0d08a8a4fa3.wav
+took 2.4771182537078857 seconds
+Successfully uploaded to output/f50763ee-2936-4e9b-9202-be49f04cf49c.wav
+took 2.509561777114868 seconds
+Successfully uploaded to output/76bea852-5098-4726-a69b-2ab00834c34c.wav
+took 2.6129932403564453 seconds
+Successfully uploaded to output/0385264d-c6a8-4b84-bee8-a3a128524603.wav
+took 2.63596773147583 seconds
+Successfully uploaded to output/a2a33fda-832b-4c9a-bb71-3a33c74f9ce8.wav
+took 2.530902624130249 seconds
+Successfully uploaded to output/0b7109e0-19dd-4484-98dd-8703ac9cc685.wav
+took 2.647451639175415 seconds
+Successfully uploaded to output/3edadfbf-1681-49f0-a0d9-005763b1732c.wav
+took 2.583383083343506 seconds
+Successfully uploaded to output/18428993-669b-4993-9818-ddbf148c6f2b.wav
+took 2.5421242713928223 seconds
+Successfully uploaded to output/97250560-d454-4a4f-918a-d3a076f4bfa1.wav
+took 2.5958077907562256 seconds

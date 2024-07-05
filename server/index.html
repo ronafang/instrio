@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>instrio</title>
+    <script src="RecordRTC.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.5/dist/ffmpeg.min.js"></script>
+</head>
+<body>
+    <button id="start-recording">choose music tab</button>
+    <button id="stop-recording" disabled>stop</button>
+    <div id="recordings"></div>
+
+    <script>
+        const { createFFmpeg, fetchFile } = FFmpeg;
+        let ffmpeg = createFFmpeg({ log: true });
+        let recorder;
+        let mediaStream;
+        let playback = false;
+
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        let currentSourceNode = null;
+        let audioBuffers = [];
+
+        async function loadFFmpeg() {
+            if (!ffmpeg.isLoaded()) {
+                await ffmpeg.load();
+            }
+        }
+
+        function unloadFFmpeg() {
+            if (ffmpeg) {
+                ffmpeg.exit();
+            }
+        }
+
+        async function restartFFmpeg() {
+            unloadFFmpeg();
+            await loadFFmpeg();
+        }
+
+        loadFFmpeg();
+
+        function clearFFmpegMemory() {
+            try {
+                ffmpeg.FS('unlink', 'input.wav');
+                ffmpeg.FS('unlink', 'output.ogg');
+            } catch (error) {
+                console.warn("Warning: Unable to clear FFmpeg memory.", error);
+            }
+        }
+
+        function playBuffer() {
+            if (audioBuffers.length > 0 && playback) {
+                const buffer = audioBuffers.shift();
+                const sourceNode = audioContext.createBufferSource();
+                sourceNode.buffer = buffer;
+                sourceNode.connect(audioContext.destination);
+
+                const currentTime = audioContext.currentTime;
+                sourceNode.start(currentTime);
+                currentSourceNode = sourceNode;
+
+                sourceNode.onended = () => {
+                    currentSourceNode = null;
+                    playBuffer();
+                };
+            }
+        }
+
+        async function processAudio(blob) {
+            try {
+                loadFFmpeg();
+                ffmpeg.FS('writeFile', 'input.wav', await fetchFile(blob));
+                await ffmpeg.run('-i', 'input.wav', 'output.ogg');
+                const data = ffmpeg.FS('readFile', 'output.ogg');
+
+                const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
+
+                const formData = new FormData();
+                formData.append('file', oggBlob, 'audio.ogg');
+                const response = await fetch('http://174.95.215.129:3299/convert', {
+                    method: 'PUT',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    console.log('Processed audio retrieved.');
+                    const arrayBuffer = await response.arrayBuffer();
+                    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+
+                    audioBuffers.push(audioBuffer);
+
+                    if (!currentSourceNode) {
+                        playBuffer();
+                    }
+                } else {
+                    console.error('Failed to process audio.');
+                }
+
+            } catch (error) {
+                console.error('Error during the processing', error);
+            }
+        }
+
+        document.getElementById('start-recording').onclick = async () => {
+            playback = true;
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
+                console.error("getDisplayMedia is not supported by your browser.");
+                return;
+            }
+
+            try {
+                mediaStream = await navigator.mediaDevices.getDisplayMedia({ 
+                    video: true, 
+                    audio: { 
+                        channels: 2, 
+                        autoGainControl: false, 
+                        echoCancellation: false, 
+                        noiseSuppression: false, 
+                        sampleSize: 16 
+                    }
+                });
+                const audioTracks = mediaStream.getAudioTracks();
+                if (audioTracks.length === 0) {
+                    throw new Error("No audio track found in screen capture");
+                }
+
+                const audioStream = new MediaStream(audioTracks);
+                recorder = new RecordRTC(audioStream, {
+                    type: 'audio',
+                    mimeType: 'audio/wav',
+                    recorderType: StereoAudioRecorder,
+                    desiredSampRate: 44100,
+                    timeSlice: 5000,
+                    ondataavailable: processAudio
+                });
+
+                recorder.startRecording();
+                document.getElementById('start-recording').disabled = true;
+                document.getElementById('stop-recording').disabled = false;
+            } catch (error) {
+                console.error("Error capturing media:", error);
+            }
+        };
+
+        document.getElementById('stop-recording').onclick = () => {
+            playback = false;
+            currentSourceNode = null;
+            recorder.stopRecording(() => {
+                let blob = recorder.getBlob();
+                // processAudio(blob);
+            });
+
+            mediaStream.getTracks().forEach(track => track.stop());
+            document.getElementById('start-recording').disabled = false;
+            document.getElementById('stop-recording').disabled = true;
+        };
+
+        setInterval(async () => {
+            await restartFFmpeg();
+            console.log('ffmpeg.wasm has been restarted');
+        }, 300000);
+    </script>
+</body>
+</html>

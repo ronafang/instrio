@@ -1,10 +1,11 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 import os
 import uuid
 from dotenv import load_dotenv
+from process import process
 
 load_dotenv()
 app = FastAPI()
@@ -24,6 +25,17 @@ S3_BUCKET = os.getenv('S3_BUCKET')
 
 s3_client = boto3.client('s3', region_name=AWS_REGION)
 
+
+@app.post("/convert")
+def convert(file: UploadFile = File(...)):
+    try:
+        input = await file.read()
+        output = process(input)
+        
+        return JSONResponse(content={"filename": file.filename, "message": "File uploaded successfully"}, status_code=200)
+    except Exception as e:
+        return JSONResponse(content={"message": str(e)}, status_code=400)
+        
 
 @app.post("/upload-audio-url/")
 def generate_signed_url():

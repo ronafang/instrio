@@ -9,6 +9,7 @@ AWS_REGION = os.getenv('AWS_REGION')
 S3_BUCKET = os.getenv('S3_BUCKET')
 SQS_URL = os.getenv('SQS_URL')
 s3 = boto3.client('s3', region_name=AWS_REGION)
+sqs = boto3.client('sqs', region_name=AWS_REGION)
 
 download_dir = 'input'
 
@@ -19,7 +20,6 @@ def fetch_s3_object(bucket_name, object_key):
 
 def process_message(message_body):
     message = json.loads(message_body)
-    print(message)
     if "Records" in message:
         for record in message['Records']:
             try:
