@@ -10,7 +10,6 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3299",
-    "http://174.95.215.129:3299", 
     "https://cdn.jsdelivr.net",
     "https://cdn.webrtc-experiment.com"
 ]

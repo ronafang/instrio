@@ -69,7 +69,6 @@
 
         async function processAudio(blob) {
             try {
-                loadFFmpeg();
                 ffmpeg.FS('writeFile', 'input.wav', await fetchFile(blob));
                 await ffmpeg.run('-i', 'input.wav', 'output.ogg');
                 const data = ffmpeg.FS('readFile', 'output.ogg');
@@ -78,7 +77,7 @@
 
                 const formData = new FormData();
                 formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('http://174.95.215.129:3299/convert', {
+                const response = await fetch('http://localhost:3299/convert', {
                     method: 'PUT',
                     body: formData
                 });
@@ -131,7 +130,7 @@
                     mimeType: 'audio/wav',
                     recorderType: StereoAudioRecorder,
                     desiredSampRate: 44100,
-                    timeSlice: 5000,
+                    timeSlice: 10000,
                     ondataavailable: processAudio
                 });
 
@@ -156,10 +155,6 @@
             document.getElementById('stop-recording').disabled = true;
         };
 
-        setInterval(async () => {
-            await restartFFmpeg();
-            console.log('ffmpeg.wasm has been restarted');
-        }, 300000);
     </script>
 </body>
 </html>
