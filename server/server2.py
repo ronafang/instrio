@@ -10,7 +10,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3299",
-    "http://174.95.215.129:3299", 
+    "http://100.11.125.215",
     "https://cdn.jsdelivr.net",
     "https://cdn.webrtc-experiment.com"
 ]
@@ -59,4 +59,4 @@ async def convert(file: UploadFile):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=3299)
+    uvicorn.run(app, host="0.0.0.0", port=8888)
