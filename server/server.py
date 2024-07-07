@@ -5,13 +5,12 @@ from fastapi.staticfiles import StaticFiles
 from process import process
 from io import BytesIO
 import os
+import uvicorn
 
 app = FastAPI()
 
 origins = [
-    "http://localhost:3299",
-    "https://cdn.jsdelivr.net",
-    "https://cdn.webrtc-experiment.com"
+    "*"
 ]
 
 app.add_middleware(
@@ -24,7 +23,7 @@ app.add_middleware(
 
 
 with open("index.html", "r") as file:
-    html_content = file.read()
+    index_html = file.read()
 
 with open("RecordRTC.js", "r") as file:
     rtc = file.read()
@@ -37,8 +36,8 @@ async def add_security_headers(request: Request, call_next):
     return response
 
 @app.get("/", response_class=HTMLResponse)
-async def read_index():
-    return HTMLResponse(content=html_content, status_code=200)
+async def home():
+    return HTMLResponse(content=index_html, status_code=200)
 
 @app.get("/RecordRTC.js", response_class=HTMLResponse)
 async def read_index():
@@ -54,8 +53,3 @@ async def convert(file: UploadFile):
             'Content-Disposition': 'attachment; filename="audio.ogg"'
         })
     return Response(status_code=400, content="Invalid file type")
-
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=3299)
