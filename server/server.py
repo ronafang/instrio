@@ -1,16 +1,21 @@
-from fastapi import FastAPI, HTTPException, File, UploadFile
+from fastapi import FastAPI, Request, Response, UploadFile, Depends
+from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
-import boto3
-from botocore.exceptions import NoCredentialsError, PartialCredentialsError
-import os
-import uuid
-from dotenv import load_dotenv
+from fastapi.staticfiles import StaticFiles
 from process import process
+from io import BytesIO
+import os
+import uvicorn
+from concurrent.futures import ThreadPoolExecutor
+import asyncio
 
-load_dotenv()
 app = FastAPI()
 
-origins = ["*"]
+executor = ThreadPoolExecutor(max_workers=10)
+
+origins = [
+    "*"
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,43 +25,36 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-AWS_REGION = os.getenv('AWS_REGION')
-S3_BUCKET = os.getenv('S3_BUCKET')
 
-s3_client = boto3.client('s3', region_name=AWS_REGION)
+with open("index.html", "r") as file:
+    index_html = file.read()
+
+with open("RecordRTC.js", "r") as file:
+    rtc = file.read()
+
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers['Cross-Origin-Opener-Policy'] = 'same-origin'
+    response.headers['Cross-Origin-Embedder-Policy'] = 'require-corp'
+    return response
+
+@app.get("/", response_class=HTMLResponse)
+async def home():
+    return HTMLResponse(content=index_html, status_code=200)
+
+@app.get("/RecordRTC.js", response_class=HTMLResponse)
+async def read_index():
+    return HTMLResponse(content=rtc, status_code=200)
 
 
-@app.post("/convert")
-def convert(file: UploadFile = File(...)):
-    try:
-        input = await file.read()
-        output = process(input)
-        
-        return JSONResponse(content={"filename": file.filename, "message": "File uploaded successfully"}, status_code=200)
-    except Exception as e:
-        return JSONResponse(content={"message": str(e)}, status_code=400)
-        
-
-@app.post("/upload-audio-url/")
-def generate_signed_url():
-    try:
-        task_id = uuid.uuid4()
-        input_file_name = f"input/{task_id}.wav"
-        input_url = s3_client.generate_presigned_url(
-            'put_object',
-            Params={'Bucket': S3_BUCKET, 'Key': input_file_name, 'ContentType': "audio/wav"},
-            ExpiresIn=3600
-        )
-        output_file_name = f"output/{task_id}.wav"
-        output_url = s3_client.generate_presigned_url(
-            'get_object',
-            Params={'Bucket': S3_BUCKET, 'Key': output_file_name},
-            ExpiresIn=3600
-        )
-        return {"input_url": input_url, "output_url": output_url}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, host='0.0.0.0', port=8000)
+@app.put("/convert")
+async def convert(file: UploadFile):
+    if file.content_type == 'audio/ogg':
+        audio_data = BytesIO(await file.read())
+        loop = asyncio.get_running_loop()
+        output = await loop.run_in_executor(executor, process, audio_data)
+        return Response(content=output.getvalue(), media_type='audio/ogg', headers={
+            'Content-Disposition': 'attachment; filename="audio.ogg"'
+        })
+    return Response(status_code=400, content="Invalid file type")

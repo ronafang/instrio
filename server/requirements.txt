@@ -3,4 +3,4 @@ uvicorn==0.30.1
 boto3==1.34.122
 python-dotenv==1.0.1
 demucs==4.0.1
-soundfile
+soundfile==0.12.1

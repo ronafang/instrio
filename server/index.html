@@ -12,33 +12,37 @@
 
     <script>
         const { createFFmpeg, fetchFile } = FFmpeg;
-        let ffmpeg = createFFmpeg({ log: true });
+        let ffmpegRef = new Map()
+        let ffmpeg = createFFmpeg({ 
+                log: false,
+                logger: () => {},
+                progress: () => {}
+            });
+        ffmpeg.load()
         let recorder;
         let mediaStream;
         let playback = false;
+
+        ffmpegRef.set("ffmpeg", null)
 
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
         let currentSourceNode = null;
         let audioBuffers = [];
 
-        async function loadFFmpeg() {
-            if (!ffmpeg.isLoaded()) {
-                await ffmpeg.load();
+        function recreateFFmpeg() {
+            if (ffmpegRef.get("ffmpeg") != null) {
+                ffmpeg = ffmpegRef.get("ffmpeg")
+                ffmpeg = null
             }
+            newffmpeg = createFFmpeg({ 
+                log: false,
+                logger: () => {},
+                progress: () => {}
+            });
+            ffmpegRef.set("ffmpeg", newffmpeg) 
         }
 
-        function unloadFFmpeg() {
-            if (ffmpeg) {
-                ffmpeg.exit();
-            }
-        }
-
-        async function restartFFmpeg() {
-            unloadFFmpeg();
-            await loadFFmpeg();
-        }
-
-        loadFFmpeg();
+        // recreateFFmpeg()
 
         function clearFFmpegMemory() {
             try {
@@ -69,16 +73,14 @@
 
         async function processAudio(blob) {
             try {
-                loadFFmpeg();
                 ffmpeg.FS('writeFile', 'input.wav', await fetchFile(blob));
                 await ffmpeg.run('-i', 'input.wav', 'output.ogg');
                 const data = ffmpeg.FS('readFile', 'output.ogg');
 
                 const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
-
                 const formData = new FormData();
                 formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('http://100.11.125.215:20003/pconvert', {
+                const response = await fetch('http://localhost:8000/convert', {
                     method: 'PUT',
                     body: formData
                 });
@@ -96,6 +98,16 @@
                 } else {
                     console.error('Failed to process audio.');
                 }
+                console.log(Date.now(), "start deletion")
+                ffmpeg.exit()
+                ffmpeg = null
+                ffmpeg = createFFmpeg({ 
+                    log: false,
+                    logger: () => {},
+                    progress: () => {}
+                    });
+                ffmpeg.load()
+                console.log(Date.now(), "restarted ffmpeg")
 
             } catch (error) {
                 console.error('Error during the processing', error);
@@ -156,10 +168,7 @@
             document.getElementById('stop-recording').disabled = true;
         };
 
-        setInterval(async () => {
-            await restartFFmpeg();
-            console.log('ffmpeg.wasm has been restarted');
-        }, 300000);
     </script>
+ 
 </body>
 </html>

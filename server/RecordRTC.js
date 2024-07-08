@@ -2153,7 +2153,7 @@ function MediaStreamRecorder(mediaStream, config) {
 
             if (typeof config.timeSlice === 'number') {
                 if (e.data && e.data.size) {
-                    arrayOfBlobs.push(e.data);
+                    // arrayOfBlobs.push(e.data);
                     updateTimeStamp();
 
                     if (typeof config.ondataavailable === 'function') {
@@ -2162,6 +2162,7 @@ function MediaStreamRecorder(mediaStream, config) {
                             type: getMimeType(recorderHints)
                         });
                         config.ondataavailable(blob);
+                        blob = null
                     }
                 }
                 return;
@@ -3133,15 +3134,15 @@ function StereoAudioRecorder(mediaStream, config) {
 
         // we clone the samples
         var chLeft = new Float32Array(left);
-        leftchannel.push(chLeft);
+        leftchannel=[chLeft];
 
         if (numberOfAudioChannels === 2) {
             var right = e.inputBuffer.getChannelData(1);
             var chRight = new Float32Array(right);
-            rightchannel.push(chRight);
+            rightchannel = [chRight];
         }
 
-        recordingLength += bufferSize;
+        recordingLength = bufferSize;
 
         // export raw PCM
         self.recordingLength = recordingLength;
