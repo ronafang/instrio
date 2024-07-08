@@ -6,8 +6,12 @@ from process import process
 from io import BytesIO
 import os
 import uvicorn
+from concurrent.futures import ThreadPoolExecutor
+import asyncio
 
 app = FastAPI()
+
+executor = ThreadPoolExecutor(max_workers=10)
 
 origins = [
     "*"
@@ -48,7 +52,8 @@ async def read_index():
 async def convert(file: UploadFile):
     if file.content_type == 'audio/ogg':
         audio_data = BytesIO(await file.read())
-        output = process(audio_data)
+        loop = asyncio.get_running_loop()
+        output = await loop.run_in_executor(executor, process, audio_data)
         return Response(content=output.getvalue(), media_type='audio/ogg', headers={
             'Content-Disposition': 'attachment; filename="audio.ogg"'
         })

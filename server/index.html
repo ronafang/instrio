@@ -80,7 +80,7 @@
                 const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
                 const formData = new FormData();
                 formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('http://localhost:8888/convert', {
+                const response = await fetch('http://localhost:8000/convert', {
                     method: 'PUT',
                     body: formData
                 });
