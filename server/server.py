@@ -26,7 +26,7 @@ app.add_middleware(
 )
 
 
-with open("index.html", "r") as file:
+with open("load.html", "r") as file:
     index_html = file.read()
 
 with open("RecordRTC.js", "r") as file:
