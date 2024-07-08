@@ -6,13 +6,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.5/dist/ffmpeg.min.js"></script>
 </head>
 <body>
-    <button id="start-recording">choose music tab</button>
+    <button id="start-recording">choose music here</button>
     <button id="stop-recording" disabled>stop</button>
+    <p>1. click [choose music here] and select the tab your music is playing</p>
+    <p>2. right click that browser tab and click mute site</p>
+    <p>3. wait 10 seconds</p>
+
     <div id="recordings"></div>
 
     <script>
         const { createFFmpeg, fetchFile } = FFmpeg;
         let ffmpegRef = new Map()
+        processing = false
         let ffmpeg = createFFmpeg({ 
                 log: false,
                 logger: () => {},
@@ -74,13 +79,15 @@
         async function processAudio(blob) {
             try {
                 ffmpeg.FS('writeFile', 'input.wav', await fetchFile(blob));
+                processing = true
                 await ffmpeg.run('-i', 'input.wav', 'output.ogg');
+                processing = false
                 const data = ffmpeg.FS('readFile', 'output.ogg');
 
                 const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
                 const formData = new FormData();
                 formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('http://localhost:8000/convert', {
+                const response = await fetch('http://147.185.40.26:20020/convert', {
                     method: 'PUT',
                     body: formData
                 });
@@ -99,15 +106,17 @@
                     console.error('Failed to process audio.');
                 }
                 console.log(Date.now(), "start deletion")
-                ffmpeg.exit()
-                ffmpeg = null
-                ffmpeg = createFFmpeg({ 
+                if (! processing){
+                    ffmpeg.exit()
+                    ffmpeg = null
+                    ffmpeg = createFFmpeg({ 
                     log: false,
                     logger: () => {},
                     progress: () => {}
                     });
-                ffmpeg.load()
-                console.log(Date.now(), "restarted ffmpeg")
+                    ffmpeg.load()
+                }
+
 
             } catch (error) {
                 console.error('Error during the processing', error);
@@ -143,7 +152,7 @@
                     mimeType: 'audio/wav',
                     recorderType: StereoAudioRecorder,
                     desiredSampRate: 44100,
-                    timeSlice: 5000,
+                    timeSlice: 6000,
                     ondataavailable: processAudio
                 });
 
