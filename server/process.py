@@ -9,6 +9,7 @@ import os
 import boto3
 from dotenv import load_dotenv
 import time
+import gc
 
 load_dotenv()
 
@@ -32,16 +33,26 @@ def convert_tensor_to_ogg(tensor, sample_rate):
 def combine_audio_tensors(audio_tensors):
     combined_tensor = sum(audio_tensors)
     combined_tensor /= len(audio_tensors)
-    
     return combined_tensor
 
 def process(ogg_data):
-    tensor, fs = ogg_to_tensor(ogg_data)
-    start_time = time.time()
-    out = apply_model(model, tensor.unsqueeze(0))[0]
-    end_time = time.time()
-    print("took", end_time-start_time, "seconds")
-    instr = combine_audio_tensors(out[:-1])
-    instr = instr.cpu()
-    instr_buffer = convert_tensor_to_ogg(instr, fs)
+    with torch.no_grad():
+        tensor, fs = ogg_to_tensor(ogg_data)
+        start_time = time.time()
+        out = apply_model(model, tensor.unsqueeze(0))[0]
+        end_time = time.time()
+        print("took", end_time-start_time, "seconds")
+        instr = combine_audio_tensors(out[:-1])
+        instr = instr.cpu()
+        instr_buffer = convert_tensor_to_ogg(instr, fs)
+
+        # Clean up GPU memory
+        del tensor
+        del out
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        
+        # Force garbage collection
+        gc.collect()
+
     return instr_buffer

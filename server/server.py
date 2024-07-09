@@ -13,6 +13,7 @@ app = FastAPI()
 
 executor = ThreadPoolExecutor(max_workers=100)
 count = 0
+visits = 0
 origins = [
     "*"
 ]
@@ -41,6 +42,7 @@ async def add_security_headers(request: Request, call_next):
 
 @app.get("/", response_class=HTMLResponse)
 async def home():
+    global visits
     print(count, visits, "at", datetime.now())
     return HTMLResponse(content=index_html, status_code=200)
 
