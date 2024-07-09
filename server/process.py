@@ -12,7 +12,9 @@ import time
 
 load_dotenv()
 
-model = pretrained.get_model('htdemucs')
+model = pretrained.get_model('mdx_extra')
+if torch.cuda.is_available():
+    model = model.to("cuda")
 
 def ogg_to_tensor(ogg_data):
     waveform, sample_rate = sf.read(ogg_data, dtype='float32')

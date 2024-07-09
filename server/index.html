@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1JT5K9J5C"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N5Q6HX9DP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-F1JT5K9J5C');
+  gtag('config', 'G-7N5Q6HX9DP');
 </script>
     <title>instrio</title>
     <script src="RecordRTC.js"></script>
@@ -27,7 +26,7 @@
         const { createFFmpeg, fetchFile } = FFmpeg;
         let ffmpegRef = new Map()
         processing = false
-        let ffmpeg = createFFmpeg({ 
+        let ffmpeg = createFFmpeg({
                 log: false,
                 logger: () => {},
                 progress: () => {}
@@ -48,12 +47,12 @@
                 ffmpeg = ffmpegRef.get("ffmpeg")
                 ffmpeg = null
             }
-            newffmpeg = createFFmpeg({ 
+            newffmpeg = createFFmpeg({
                 log: false,
                 logger: () => {},
                 progress: () => {}
             });
-            ffmpegRef.set("ffmpeg", newffmpeg) 
+            ffmpegRef.set("ffmpeg", newffmpeg)
         }
 
         // recreateFFmpeg()
@@ -96,7 +95,7 @@
                 const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
                 const formData = new FormData();
                 formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('https://instr.io:20003/convert', {
+                const response = await fetch('https://api.instr.io:20006/convert', {
                     method: 'PUT',
                     body: formData
                 });
@@ -118,7 +117,7 @@
                 if (! processing){
                     ffmpeg.exit()
                     ffmpeg = null
-                    ffmpeg = createFFmpeg({ 
+                    ffmpeg = createFFmpeg({
                     log: false,
                     logger: () => {},
                     progress: () => {}
@@ -140,14 +139,14 @@
             }
 
             try {
-                mediaStream = await navigator.mediaDevices.getDisplayMedia({ 
-                    video: true, 
-                    audio: { 
-                        channels: 2, 
-                        autoGainControl: false, 
-                        echoCancellation: false, 
-                        noiseSuppression: false, 
-                        sampleSize: 16 
+                mediaStream = await navigator.mediaDevices.getDisplayMedia({
+                    video: true,
+                    audio: {
+                        channels: 2,
+                        autoGainControl: false,
+                        echoCancellation: false,
+                        noiseSuppression: false,
+                        sampleSize: 16
                     }
                 });
                 const audioTracks = mediaStream.getAudioTracks();
@@ -187,6 +186,6 @@
         };
 
     </script>
- 
+
 </body>
 </html>
