@@ -43,12 +43,14 @@ def process(ogg_data):
         end_time = time.time()
         print("took", end_time-start_time, "seconds")
         instr = combine_audio_tensors(out[:-1])
-        instr = instr.cpu()
-        instr_buffer = convert_tensor_to_ogg(instr, fs)
+        instr2 = instr.cpu()
+        instr_buffer = convert_tensor_to_ogg(instr2, fs)
 
         # Clean up GPU memory
         del tensor
         del out
+        del instr
+        del instr2
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         
