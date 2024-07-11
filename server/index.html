@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N5Q6HX9DP"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1JT5K9J5C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-7N5Q6HX9DP');
+  gtag('config', 'G-F1JT5K9J5C');
 </script>
     <title>instrio</title>
     <script src="RecordRTC.js"></script>
@@ -20,15 +21,13 @@
     <p>2. right click that browser tab and click mute site</p>
     <p>3. wait 10 seconds</p>
 
-
-    <a href="https://forms.gle/tSDP9dthpexfDzQr5" target="_blank">this is in beta! availability is as traffic permits. join waitlist here to know when instr.io is officially launching and get free listens for being early <3 </a>
     <div id="recordings"></div>
 
     <script>
         const { createFFmpeg, fetchFile } = FFmpeg;
         let ffmpegRef = new Map()
         processing = false
-        let ffmpeg = createFFmpeg({
+        let ffmpeg = createFFmpeg({ 
                 log: false,
                 logger: () => {},
                 progress: () => {}
@@ -49,12 +48,12 @@
                 ffmpeg = ffmpegRef.get("ffmpeg")
                 ffmpeg = null
             }
-            newffmpeg = createFFmpeg({
+            newffmpeg = createFFmpeg({ 
                 log: false,
                 logger: () => {},
                 progress: () => {}
             });
-            ffmpegRef.set("ffmpeg", newffmpeg)
+            ffmpegRef.set("ffmpeg", newffmpeg) 
         }
 
         // recreateFFmpeg()
@@ -97,7 +96,7 @@
                 const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
                 const formData = new FormData();
                 formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('https://api.instr.io:20006/convert', {
+                const response = await fetch('http://localhost:8080/convert', {
                     method: 'PUT',
                     body: formData
                 });
@@ -119,7 +118,7 @@
                 if (! processing){
                     ffmpeg.exit()
                     ffmpeg = null
-                    ffmpeg = createFFmpeg({
+                    ffmpeg = createFFmpeg({ 
                     log: false,
                     logger: () => {},
                     progress: () => {}
@@ -141,14 +140,14 @@
             }
 
             try {
-                mediaStream = await navigator.mediaDevices.getDisplayMedia({
-                    video: true,
-                    audio: {
-                        channels: 2,
-                        autoGainControl: false,
-                        echoCancellation: false,
-                        noiseSuppression: false,
-                        sampleSize: 16
+                mediaStream = await navigator.mediaDevices.getDisplayMedia({ 
+                    video: true, 
+                    audio: { 
+                        channels: 2, 
+                        autoGainControl: false, 
+                        echoCancellation: false, 
+                        noiseSuppression: false, 
+                        sampleSize: 16 
                     }
                 });
                 const audioTracks = mediaStream.getAudioTracks();
@@ -188,6 +187,6 @@
         };
 
     </script>
-
+ 
 </body>
 </html>

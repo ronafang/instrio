@@ -63,7 +63,7 @@ async def convert(file: UploadFile):
         threads.append((thread, stop_event))
         thread.start()
 
-        thread.join(timeout=20)
+        thread.join(timeout=40)
         if thread.is_alive():
             stop_event.set()
             print(f"Thread timed out: {thread.name}")

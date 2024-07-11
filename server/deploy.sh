@@ -30,9 +30,9 @@ Listen 20207
     CustomLog ${APACHE_LOG_DIR}/ssl_port_access.log combined
 </VirtualHost>
 
-nano /etc/apache2/apiinstrio.crt
-nano /etc/apache2/apiinstrio.key
-nano /etc/apache2/apiinstrio.ca-bundle
+sudo nano /etc/apache2/apiinstrio.crt
+sudo nano /etc/apache2/apiinstrio.key
+sudo nano /etc/apache2/apiinstrio.ca-bundle
 
 sudo a2ensite ssl-port.conf
 sudo systemctl restart apache2
