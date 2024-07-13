@@ -46,7 +46,6 @@ def process(ogg_data):
         instr2 = instr.cpu()
         instr_buffer = convert_tensor_to_ogg(instr2, fs)
 
-        # Clean up GPU memory
         del tensor
         del out
         del instr
@@ -54,7 +53,6 @@ def process(ogg_data):
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         
-        # Force garbage collection
         gc.collect()
 
     return instr_buffer
