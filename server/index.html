@@ -87,16 +87,16 @@
 
         async function processAudio(blob) {
             try {
-                ffmpeg.FS('writeFile', 'input.wav', await fetchFile(blob));
-                processing = true
-                await ffmpeg.run('-i', 'input.wav', 'output.ogg');
-                processing = false
-                const data = ffmpeg.FS('readFile', 'output.ogg');
+                // ffmpeg.FS('writeFile', 'input.wav', await fetchFile(blob));
+                // processing = true
+                // await ffmpeg.run('-i', 'input.wav', 'output.ogg');
+                // processing = false
+                // const data = ffmpeg.FS('readFile', 'output.ogg');
 
-                const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
+                // const oggBlob = new Blob([data.buffer], { type: 'audio/ogg' });
                 const formData = new FormData();
-                formData.append('file', oggBlob, 'audio.ogg');
-                const response = await fetch('http://localhost:8080/convert', {
+                formData.append('file', blob, 'audio.wav');
+                const response = await fetch('http://localhost:8000/convert', {
                     method: 'PUT',
                     body: formData
                 });

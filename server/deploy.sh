@@ -12,22 +12,27 @@ echo $CRT > /etc/apache2/apiinstrio.crt
 echo $KEY > /etc/apache2/apiinstrio.key
 echo $BUNDLE > /etc/apache2/apiinstrio.ca-bundle
 
-#  add this as ssl-port.conf
+<VirtualHost *:80>
+    ServerName api.instr.io
+    Redirect permanent / https://api.instr.io/
+</VirtualHost>
 
-Listen 20207
-
-<VirtualHost *:20207>
+# Serve your application on port 443 with SSL
+<VirtualHost *:443>
     ServerName api.instr.io
 
     SSLEngine on
-    SSLCertificateFile apiinstrio.crt
-    SSLCertificateKeyFile apiinstrio.key
-    SSLCertificateChainFile apiinstrio.ca-bundle
-
-    DocumentRoot /var/www/html
+    SSLCertificateFile /etc/apache2/apiinstrio.crt
+    SSLCertificateKeyFile /etc/apache2/apiinstrio.>
+    SSLCertificateChainFile /etc/apache2/apiinstri>
 
     ErrorLog ${APACHE_LOG_DIR}/ssl_port_error.log
-    CustomLog ${APACHE_LOG_DIR}/ssl_port_access.log combined
+    CustomLog ${APACHE_LOG_DIR}/ssl_port_access.lo>
+
+    # Proxy configuration to forward requests to t>
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:8000/
+    ProxyPassReverse / http://localhost:8000/
 </VirtualHost>
 
 sudo nano /etc/apache2/apiinstrio.crt

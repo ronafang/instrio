@@ -55,27 +55,28 @@ def process_audio(audio_data, output_list, stop_event):
 async def convert(file: UploadFile):
     global count
     count += 1
-    if file.content_type == 'audio/ogg':
-        audio_data = BytesIO(await file.read())
-        output_list = []
-        stop_event = threading.Event()
-        thread = threading.Thread(target=process_audio, args=(audio_data, output_list, stop_event))
-        threads.append((thread, stop_event))
-        thread.start()
+    audio_data = BytesIO(await file.read())
+    output_list = []
+    stop_event = threading.Event()
+    thread = threading.Thread(target=process_audio, args=(audio_data, output_list, stop_event))
+    threads.append((thread, stop_event))
+    thread.start()
 
-        thread.join(timeout=40)
-        if thread.is_alive():
-            stop_event.set()
-            print(f"Thread timed out: {thread.name}")
-            return Response(status_code=504, content="Processing timed out")
+    thread.join(timeout=40)
 
-        if count % 5 == 0:
-            print(count, datetime.now())
+    if thread.is_alive():
+        stop_event.set()
+        print(f"Thread timed out: {thread.name}")
+        return Response(status_code=504, content="Processing timed out")
 
-        if output_list:
-            output = output_list[0]
-            return Response(content=output.getvalue(), media_type='audio/ogg', headers={
-                'Content-Disposition': 'attachment; filename="audio.ogg"'
-            })
+    if count % 5 == 0:
+        print(count, datetime.now())
+
+    if output_list:
+        output = output_list[0]
+        filename = file.content_type.replace("/", ".")
+        return Response(content=output.getvalue(), media_type=file.content_type, headers={
+            'Content-Disposition': f"attachment; filename=\"{filename}\""
+        })
 
     return Response(status_code=400, content="Invalid file type")
