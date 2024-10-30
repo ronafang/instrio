@@ -7,6 +7,7 @@ from datetime import datetime
 from process import process
 from io import BytesIO
 import time
+import uvicorn
 
 app = FastAPI()
 
@@ -80,3 +81,5 @@ async def convert(file: UploadFile):
         })
 
     return Response(status_code=400, content="Invalid file type")
+
+uvicorn.run(app, host="0.0.0.0", port=8000)

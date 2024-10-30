@@ -13,7 +13,7 @@ import gc
 
 load_dotenv()
 
-model = pretrained.get_model('mdx_extra')
+model = pretrained.get_model('hdemucs_mmi')
 if torch.cuda.is_available():
     model = model.to("cuda")
 
